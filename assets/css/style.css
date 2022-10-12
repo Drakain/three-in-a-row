@@ -118,3 +118,14 @@ button {
 .visible {
     display: block;
 }
+
+/* Hover */
+.x-hover:hover::after {
+    content: "X";
+    opacity: 0.4;
+}
+
+.o-hover:hover::after {
+    content: "O";
+    opacity: 0.4;
+}
