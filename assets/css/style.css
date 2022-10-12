@@ -29,6 +29,7 @@ h1 {
     border: 2px solid white;
 }
 
+/* Strike lines */
 .strike {
     position: absolute;
     background-color: red;
@@ -84,4 +85,36 @@ h1 {
     top: 50%;
     left: 5%;
     transform: skewY(-45deg);
+}
+
+/* Game over area */
+#game-over-container {
+    text-align: center;
+    border: 8px solid white;
+    padding: 20px;
+    width: 20%;
+    margin-top: 20px;
+}
+
+h2 {
+    color: white;
+    font-size: 30px;
+}
+
+button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 20px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+/* Test classes */
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
 }

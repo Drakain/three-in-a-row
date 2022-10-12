@@ -15,17 +15,24 @@
 <body>
     <h1>Placeholder Title</h1>
     <div class="game-board">
-        <div data-index ="1" class="tile">X</div>
-        <div data-index ="2" class="tile">X</div>
-        <div data-index ="3" class="tile">X</div>
-        <div data-index ="4" class="tile">X</div>
-        <div data-index ="5" class="tile">X</div>
-        <div data-index ="6" class="tile">X</div>
-        <div data-index ="7" class="tile">X</div>
-        <div data-index ="8" class="tile">X</div>
-        <div data-index ="9" class="tile">X</div>
+        <div data-index ="1" class="tile"></div>
+        <div data-index ="2" class="tile"></div>
+        <div data-index ="3" class="tile"></div>
+        <div data-index ="4" class="tile"></div>
+        <div data-index ="5" class="tile"></div>
+        <div data-index ="6" class="tile"></div>
+        <div data-index ="7" class="tile"></div>
+        <div data-index ="8" class="tile"></div>
+        <div data-index ="9" class="tile"></div>
 
-        <div id="strike" class="strike strike-diagonal-2"></div>
+        <div id="strike" class="strike"></div>
     </div>
+
+    <div id="game-over-container" class="hidden">
+        <h2 id="game-over-text">X is the winner!</h2>
+    </div>
+    <button id="restart">Restart</button>
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
