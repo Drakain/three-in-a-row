@@ -18,10 +18,10 @@ body {
 
 /* The title */
 h1 {
-    color: rgb(16, 99, 13);
-    font-family: 'Fleur De Leah', cursive;
-    font-size: 120px;
     padding: 20px;
+    color: rgb(0, 0, 0);
+    font-family: 'Fleur De Leah', cursive;
+    font-size: 130px;
     text-shadow:
         0 0 8px rgb(255, 255, 255),
         0 0 11px rgb(255, 255, 255),
@@ -40,11 +40,11 @@ h1 {
     grid-template-rows: 160px 160px 160px;
     position: relative;
     cursor: pointer;
-    border: 2px solid white;
-    background-color: rgb(88, 53, 7);
+    border: 2px solid rgb(255, 255, 255);
+    background-color: transparent;
 }
 
-
+/* Game tiles */
 .tile {
     margin: 10px;
     color: white;
@@ -130,6 +130,7 @@ h1 {
     padding: 20px;
     width: 20%;
     margin-top: 20px;
+    background-color: black;
 }
 
 /* Text in the game over area */
@@ -140,14 +141,26 @@ h2 {
 
 /* The restart button */
 button {
-    background-color: transparent;
+    background-color: black;
     color: white;
     border: 1px solid white;
-    padding: 20px;
-    margin-top: 10px;
+    padding: 10px 20px;
+    margin-top: 20px;
     font-size: 40px;
     font-family: 'Fleur De Leah', cursive;
     cursor: pointer;
+}
+
+button:hover {
+    text-shadow:
+    0 0 8px rgb(255, 255, 255),
+    0 0 11px rgb(255, 255, 255),
+    0 0 22px rgb(255, 255, 255),
+    0 0 40px rgb(6, 236, 159),
+    0 0 85px rgb(222, 255, 34),
+    0 0 93px rgb(0, 255, 170),
+    0 0 101px rgb(0, 255, 170),
+    0 0 149px rgb(225, 250, 4);
 }
 
 /* Classes to hide elements or make them visible */
