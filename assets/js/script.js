@@ -1,6 +1,6 @@
 // Players and tiles
-const playerX = "X";
-const playerO = "O";
+const playerX = 'X';
+const playerO = 'O';
 const tiles = document.querySelectorAll('.tile');
 
 let turn = playerX;
@@ -65,7 +65,7 @@ function setHoverText() {
     // Check if tile is empty
     tiles.forEach((tile) => {
         if (tile.innerText == '') {
-            tile.classList.add(hoverClass)
+            tile.classList.add(hoverClass);
         }
     });
 }
@@ -87,7 +87,7 @@ const winConditions = [
     // Diagonals
     {combo: [1, 5, 9], strikeClass: 'strike-diagonal-1'},
     {combo: [3, 5, 7], strikeClass: 'strike-diagonal-2'},
-]
+];
 
 // Function that checks for a win or draw condition
 function checkWinner() {
