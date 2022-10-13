@@ -184,3 +184,8 @@ button:hover {
     content: "O";
     opacity: 0.4;
 }
+
+/* Screens 520 px and below */
+@media screen and (max-width: 520px) {
+
+ }
