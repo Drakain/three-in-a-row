@@ -6,39 +6,63 @@
     margin: 0;
 }
 
+/* Body */
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
     background: radial-gradient(ellipse, rgb(105, 9, 92), rgb(114, 13, 97), rgb(66, 4, 95));
     font-family: 'Fleur De Leah', cursive;
+    background-image: url(../images/forest.webp);
 }
 
+/* The title */
 h1 {
-    color: white;
+    color: rgb(16, 99, 13);
     font-family: 'Fleur De Leah', cursive;
     font-size: 120px;
     padding: 20px;
+    text-shadow:
+        0 0 8px rgb(255, 255, 255),
+        0 0 11px rgb(255, 255, 255),
+        0 0 22px rgb(255, 255, 255),
+        0 0 40px rgb(0, 0, 0),
+        0 0 85px rgb(0, 0, 0),
+        0 0 93px rgb(0, 0, 0),
+        0 0 101px rgb(0, 0, 0),
+        0 0 149px rgb(0, 0, 0);
 }
 
+/* The game board */
 .game-board {
     display: grid;
-    grid-template-columns: 100px 100px 100px;
-    grid-template-rows: 100px 100px 100px;
+    grid-template-columns: 160px 160px 160px;
+    grid-template-rows: 160px 160px 160px;
     position: relative;
     cursor: pointer;
     border: 2px solid white;
+    background-color: rgb(88, 53, 7);
 }
+
 
 .tile {
     margin: 10px;
     color: white;
-    font-size: 30px;
+    font-size: 45px;
     background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 2px solid white;
+    text-shadow:
+        0 0 8px rgb(255, 255, 255),
+        0 0 11px rgb(255, 255, 255),
+        0 0 22px rgb(255, 255, 255),
+        0 0 40px rgb(6, 236, 159),
+        0 0 85px rgb(222, 255, 34),
+        0 0 93px rgb(0, 255, 170),
+        0 0 101px rgb(0, 255, 170),
+        0 0 149px rgb(225, 250, 4);
 }
 
 /* Strike lines */
@@ -108,11 +132,13 @@ h1 {
     margin-top: 20px;
 }
 
+/* Text in the game over area */
 h2 {
     color: white;
     font-size: 40px;
 }
 
+/* The restart button */
 button {
     background-color: transparent;
     color: white;
@@ -121,9 +147,10 @@ button {
     margin-top: 10px;
     font-size: 40px;
     font-family: 'Fleur De Leah', cursive;
+    cursor: pointer;
 }
 
-/* Test classes */
+/* Classes to hide elements or make them visible */
 .hidden {
     display: none;
 }

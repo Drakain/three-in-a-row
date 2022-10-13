@@ -1,3 +1,4 @@
+// Players and tiles
 const playerX = "X";
 const playerO = "O";
 const tiles = document.querySelectorAll('.tile');
@@ -15,7 +16,7 @@ const playAgain = document.getElementById('restart');
 
 playAgain.addEventListener('click', newGame);
 
-// Event listeners
+// Event listener for clicking a tile
 tiles.forEach(tile => tile.addEventListener('click', tileClick));
 
 function tileClick(event) {
@@ -63,6 +64,7 @@ function setHoverText() {
 
 setHoverText();
 
+// Array with all possible win conditions
 const winConditions = [
     // Rows
     {combo: [1, 2, 3], strikeClass: 'strike-row-1'},
@@ -79,7 +81,7 @@ const winConditions = [
     {combo: [3, 5, 7], strikeClass: 'strike-diagonal-2'},
 ]
 
-// Function to check for a win or draw condition
+// Function that checks for a win or draw condition
 function checkWinner() {
     // Check for a winner
     for (const winCondition of winConditions) {
@@ -103,15 +105,17 @@ function checkWinner() {
     }
 }
 
+// Function that shows the Game Over screen 
 function gameOverScreen(winnerText) {
     let text = 'Draw!';
     if (winnerText != null) {
-        text = `Winner is ${winnerText}!`;
+        text = `${winnerText} is the winner!`;
     }
     gameOverArea.className = 'visible';
     gameOverText.innerText = text;
 }
 
+// Function that clears the board and starts a new game
 function newGame() {
     strike.className = 'strike';
     gameOverArea.className = 'hidden';
