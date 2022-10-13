@@ -1,13 +1,13 @@
-const tiles = document.querySelectorAll('.tile');
 const playerX = "X";
 const playerO = "O";
+const tiles = document.querySelectorAll('.tile');
 
 let turn = playerX;
 
 const boardState = Array(tiles.length);
 boardState.fill(null);
 
-// Elements
+// Game elements
 const strike = document.getElementById('strike');
 const gameOverArea = document.getElementById('game-over-container');
 const gameOverText = document.getElementById('game-over-text');
@@ -53,6 +53,7 @@ function setHoverText() {
 
     const hoverClass = `${turn.toLowerCase()}-hover`;
 
+    // Check if tile is empty
     tiles.forEach((tile) => {
         if (tile.innerText == '') {
             tile.classList.add(hoverClass)
@@ -78,6 +79,7 @@ const winConditions = [
     {combo: [3, 5, 7], strikeClass: 'strike-diagonal-2'},
 ]
 
+// Function to check for a win or draw condition
 function checkWinner() {
     // Check for a winner
     for (const winCondition of winConditions) {

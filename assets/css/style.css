@@ -1,12 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap');
+
+/* Applied to the whole document */
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
     background: radial-gradient(ellipse, rgb(105, 9, 92), rgb(114, 13, 97), rgb(66, 4, 95));
+    font-family: 'Fleur De Leah', cursive;
 }
 
 h1 {
     color: white;
+    font-family: 'Fleur De Leah', cursive;
+    font-size: 120px;
+    padding: 20px;
 }
 
 .game-board {
@@ -98,7 +110,7 @@ h1 {
 
 h2 {
     color: white;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 button {
@@ -107,7 +119,8 @@ button {
     border: 1px solid white;
     padding: 20px;
     margin-top: 10px;
-    font-size: 20px;
+    font-size: 40px;
+    font-family: 'Fleur De Leah', cursive;
 }
 
 /* Test classes */
