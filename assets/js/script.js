@@ -14,6 +14,12 @@ const gameOverArea = document.getElementById('game-over-container');
 const gameOverText = document.getElementById('game-over-text');
 const playAgain = document.getElementById('restart');
 
+// Sounds
+const clickSound = new Audio('assets/sounds/leaf-click.wav');
+const gameOverSound = new Audio('assets/sounds/bird-gameover.wav');
+const restartSound = new Audio('assets/sounds/wind-restart.wav');
+
+
 playAgain.addEventListener('click', newGame);
 
 // Event listener for clicking a tile
@@ -39,6 +45,8 @@ function tileClick(event) {
         boardState[tileNumber-1] = playerO;
         turn = playerX;
     }
+
+    clickSound.play();
 
     setHoverText();
     checkWinner();
@@ -113,6 +121,8 @@ function gameOverScreen(winnerText) {
     }
     gameOverArea.className = 'visible';
     gameOverText.innerText = text;
+
+    gameOverSound.play();
 }
 
 // Function that clears the board and starts a new game
@@ -123,4 +133,6 @@ function newGame() {
     tiles.forEach((tile) => (tile.innerText = ''));
     turn = playerX;
     setHoverText();
+
+    restartSound.play();
 }
