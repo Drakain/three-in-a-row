@@ -12,9 +12,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: radial-gradient(ellipse, rgb(105, 9, 92), rgb(114, 13, 97), rgb(66, 4, 95));
     font-family: 'Fleur De Leah', cursive;
     background-image: url(../images/forest.webp);
+    background-position: center 40%;
+    background-repeat: no-repeat;
 }
 
 /* The title */
@@ -185,7 +186,78 @@ button:hover {
     opacity: 0.4;
 }
 
-/* Screens 520 px and below */
-@media screen and (max-width: 520px) {
+/* Screens 965px and below */
+@media screen and (max-width: 965px) {
+    #game-over-container {
+        width: 40%;
+    }
+}
 
- }
+/* Screens 530px and below */
+@media screen and (max-width: 530px) {
+    h1 {
+        font-size: 110px;
+    }
+
+    .game-board {
+        grid-template-columns: 140px 140px 140px;
+        grid-template-rows: 140px 140px 140px;
+    }
+}
+
+/* Screens 485px and below */
+@media screen and (max-width: 485px) {
+    h1 {
+        font-size: 90px;
+    }
+
+    .game-board {
+        grid-template-columns: 120px 120px 120px;
+        grid-template-rows: 120px 120px 120px;
+    }
+
+    #game-over-container {
+        width: 60%;
+        border: 4px solid white;
+    }
+}
+
+/* Screens 380px and below */
+@media screen and (max-width: 380px) {
+    h1 {
+        font-size: 80px;
+    }
+
+    .game-board {
+        grid-template-columns: 110px 110px 110px;
+        grid-template-rows: 110px 110px 110px;
+    }
+
+    .tile {
+        font-size: 40px;
+    }
+}
+
+/* Screens 345px and below */
+@media screen and (max-width: 345px) {
+    h1 {
+        font-size: 70px;
+    }
+
+    .game-board {
+        grid-template-columns: 100px 100px 100px;
+        grid-template-rows: 100px 100px 100px;
+    }
+
+    .tile {
+        font-size: 35px;
+    }
+
+    button {
+        font-size: 35px;
+    }
+
+    #game-over-container {
+        width: 70%;
+    }
+}
